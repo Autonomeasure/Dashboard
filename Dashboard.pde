@@ -1,13 +1,14 @@
-TCPClient c;
+import processing.net.Client;
+
+Client client;
 
 void setup() {
-  size(1080, 720);
-   c = new TCPClient(this, "localhost", 8000);
-   c.client.write("PING\n");
+  size(1280, 720);
+  background(0);
+  surface.setResizable(true);
+  //client = new Client(this, "localhost", 8000);
 }
 
 void draw() {
-  if (c.client.available() > 0) {
-    print(c.client.read()); 
-  }
+  
 }
